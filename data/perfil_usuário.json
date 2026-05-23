@@ -1,0 +1,35 @@
+{
+  "id_usuario": 1,
+  "nome": "Alessandra Patrícia",
+  "idade": 32,
+  "profissao": "Secretária Administrativa",
+  "renda_mensal": 3000.00,
+  "objetivo_principal": "Controle financeiro",
+  "patrimonio_total": 10000.00,
+  "reserva_emergencial_atual": 5000.00,
+  "aceita_risco": false,
+  
+  "metas": [
+    {
+      "meta": "Diminuir gastos desnecessários",
+      "valor_alvo": 300.00,
+      "prazo": "2026-12-31"
+    },
+    {
+      "meta": "Poupar dinheiro para formatura da filha",
+      "valor_alvo": 1500.00,
+      "valor_atual": 450.00,
+      "prazo": "2026-12-12"
+    }
+  ],
+  
+  "preferencias": {
+  "tom": "informal e acolhedor",
+  "frequencia_resumo": "semanal"
+},
+  "perfil_financeiro": {
+  "controle_gastos": "baixo",
+  "organizacao": "media",
+  "conhecimento_financeiro": "iniciante"
+  }
+}
