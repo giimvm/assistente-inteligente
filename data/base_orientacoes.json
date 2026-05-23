@@ -1,0 +1,24 @@
+{
+  "gasto_nao_planejado": {
+    "orientacao": "Ajude o usuário a refletir sobre o impacto da compra no orçamento.",
+    "perguntas": [
+      "Essa compra era realmente necessária?",
+      "Ela pode esperar alguns dias?",
+      "Como essa compra afeta sua meta atual?"
+    ]
+  },
+  "gasto_alto_em_categoria": {
+    "orientacao": "Mostre a categoria com maior gasto e sugira revisar hábitos.",
+    "perguntas": [
+      "Esse gasto está dentro do esperado?",
+      "Há alguma alternativa mais econômica?"
+    ]
+  },
+  "meta_financeira": {
+    "orientacao": "Mostre o progresso da meta e incentive pequenas economias constantes.",
+    "perguntas": [
+      "Quanto você consegue guardar por semana?",
+      "Essa meta ainda é prioridade?"
+    ]
+  }
+}
