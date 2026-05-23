@@ -1,6 +1,7 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+id,usuario_id,data,canal,intencao,tema,resumo,resolvido
+1,1,2026-05-23,chat,economia,poupar dinheiro,Cliente perguntou como criar reserva de emergência,sim
+2,1,2026-05-24,telefone,suporte,problema no app,Erro ao visualizar extrato foi corrigido,sim
+3,1,2026-06-01,chat,educacao_financeira,investimento,Cliente pediu explicação sobre investimentos,sim
+4,1,2026-06-12,chat,planejamento,metas financeiras,Cliente criou metas financeiras para o final do ano,sim
+5,1,2026-06-25,email,cadastro,atualizacao cadastral,Cliente atualizou e-mail e telefone,sim
+6,1,2026-06-26,chat,controle_gastos,duvida sobre compra,Cliente quis realizar compra fora do planejamento,sim
