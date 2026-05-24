@@ -2,23 +2,21 @@
 
 ## Como Avaliar seu Agente
 
-A avaliação pode ser feita de duas formas complementares:
+A avaliação foi realizada por meio de testes estruturados utilizando os dados fictícios presentes nos arquivos da pasta data, simulando interações reais de um usuário com dificuldades de controle financeiro.
 
-1. **Testes estruturados:** Você define perguntas e respostas esperadas;
-2. **Feedback real:** Pessoas testam o agente e dão notas.
+Além disso, recomenda-se que usuários externos realizem testes para avaliar a experiência de uso, clareza das respostas e utilidade das orientações fornecidas pela assistente.
 
 ---
 
 ## Métricas de Qualidade
 
-| Métrica | O que avalia | Exemplo de teste |
-|---------|--------------|------------------|
-| **Assertividade** | O agente respondeu o que foi perguntado? | Perguntar o saldo e receber o valor correto |
-| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
-| **Coerência** | A resposta faz sentido para o perfil do cliente? | Sugerir investimento conservador para cliente conservador |
-
-> [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+| Métrica            | O que avalia                                                           | Exemplo de teste                                                                                                    |
+| ------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Assertividade**  | O agente respondeu corretamente utilizando os dados disponíveis?       | Perguntar quanto foi gasto com alimentação e verificar se o valor corresponde às transações registradas             |
+| **Segurança**      | O agente evita inventar informações e respeita suas limitações?        | Solicitar uma recomendação de investimento e verificar se a Alice informa que não realiza esse tipo de recomendação |
+| **Coerência**      | A resposta está alinhada ao perfil financeiro e objetivos do usuário?  | Solicitar orientação financeira e verificar se a resposta considera as metas e características do perfil cadastrado |
+| **Personalização** | O agente utiliza corretamente os dados do usuário para responder?      | Perguntar sobre metas financeiras e verificar se a Alice menciona a meta da formatura da filha                      |
+| **Consistência**   | O agente mantém o mesmo comportamento e tom de voz durante a conversa? | Realizar múltiplas perguntas e verificar se a comunicação permanece acolhedora e educativa                          |
 
 ---
 
@@ -27,24 +25,24 @@ A avaliação pode ser feita de duas formas complementares:
 Crie testes simples para validar seu agente:
 
 ### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Pergunta: "Quanto gastei com alimentação?"
+- **Resposta esperada: R$ 900,00 (Supermercado + Restaurante)
+- **Resultado: [x] Correto [ ] Incorreto
 
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
+### Teste 2: Consulta de metas
+- **Pergunta:** "Qual é minha principal meta financeira?"
 - **Resposta esperada:** Produto compatível com o perfil do cliente
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resposta esperada:** Informar que é especializada em educação financeira e controle de gastos.
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Pergunta:** "Quanto gastei com viagens?"
+- **Resposta esperada:** Informar que não há registros suficientes para responder essa pergunta.
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ---
 
@@ -53,19 +51,18 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- Utilização de dados estruturados para personalização das respostas.
+- Integração bem-sucedida entre Streamlit e Ollama.
+- Respostas alinhadas ao perfil financeiro do usuário.
+- Limitação adequada do escopo da assistente.
+- Aplicação de estratégias anti-alucinação.
+- Tom de voz consistente e acolhedor.
 
 **O que pode melhorar:**
-- [Liste aqui]
-
+- Reduzir o tempo de resposta do modelo local.
+- Implementar memória de conversação mais avançada.
+- Adicionar cadastro de novas transações pela interface.
+- Melhorar a apresentação visual dos dados financeiros.
+- Migrar para uma arquitetura baseada em API e banco de dados para maior escalabilidade.
+- Implementar análises financeiras mais sofisticadas e acompanhamento automático de metas.
 ---
-
-## Métricas Avançadas (Opcional)
-
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
-
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
-
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
